@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#ff3131</color>
+    <color name="background_color">#E6E4E4</color>
+    <color name="orangeColor">#ff7a00</color>
+    <color name="deep_blue">#5784BA</color>
+    <color name="light_blue">#A3B5C3</color>
+    <color name="light_rose">#F4CFDF</color>
+
+    <!-- Secondary Background Color (e.g., buttons, header) -->
+    <color name="secondary_bg">#FFFFFF</color>
+    <color name="gray">#B9B7B7</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+    <color name="deep_gray">#868585</color>
+    <color name="light_gray">#ECECEC</color>
+    <color name="light_green">#7BC380</color>
+    <color name="diamond_color">#2196F3</color>
+</resources>

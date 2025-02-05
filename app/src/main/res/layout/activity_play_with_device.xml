@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/background"
+    android:gravity="center_horizontal"
+    tools:context=".Activities.PlayWithDeviceActivity">
+ <LinearLayout
+     android:id="@+id/result_bar_layout"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:gravity="center_vertical"
+     android:padding="10dp"
+     android:background="@drawable/enable_player_bar_background"
+     >
+     <de.hdodenhof.circleimageview.CircleImageView
+         android:id="@+id/device_result_bar_Image"
+         android:layout_width="20dp"
+         android:layout_height="20dp"
+         android:layout_centerInParent="true"
+         android:src="@drawable/robot_image"/>
+
+     <TextView
+         android:id="@+id/match_result_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="0 : 0"
+    android:textColor="@color/black"
+    android:background="@color/white"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:includeFontPadding="false"
+    android:fontFamily="@font/orbitron_semibold"/>
+     <de.hdodenhof.circleimageview.CircleImageView
+         android:id="@+id/you_result_bar_Image"
+         android:layout_width="20dp"
+         android:layout_height="20dp"
+         android:layout_centerInParent="true"
+         android:src="@drawable/player_1"/>
+
+ </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        android:layout_toLeftOf="@+id/matches_number"
+android:layout_toRightOf="@+id/result_bar_layout"
+        android:layout_alignTop="@+id/result_bar_layout"
+        android:layout_alignBottom="@+id/result_bar_layout"
+
+        >
+<LinearLayout
+    android:background="@drawable/enable_player_bar_background"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+android:gravity="center"
+    android:padding="5dp"
+
+    >
+    <TextView
+        android:id="@+id/diamodNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+3"
+        android:textColor="@color/black"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/orbitron_semibold"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/diamond_icon_image"/>
+
+</LinearLayout>
+        <LinearLayout
+            android:id="@+id/select_game_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/enable_player_bar_background"
+            android:padding="5dp"
+          android:gravity="center"
+            android:layout_marginStart="10dp"
+            >
+            <TextView
+                android:id="@+id/game_mode_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/easy_text"
+                android:textColor="@color/black"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/orbitron_semibold"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/play_mode_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/easy_game"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+    android:id="@+id/matches_number"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="0 / 3"
+    android:layout_alignParentRight="true"
+    android:textColor="@color/black"
+    android:layout_alignTop="@+id/result_bar_layout"
+    android:layout_alignBottom="@+id/result_bar_layout"
+    android:gravity="center"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:fontFamily="@font/orbitron_semibold"
+    android:background="@drawable/enable_player_bar_background"
+
+    />
+
+
+    <RelativeLayout
+        android:id="@+id/device_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_above="@+id/btns_layout"
+        android:background="@drawable/enable_player_bar_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toLeftOf="@+id/Opponent_player_Image"
+            android:autoSizeTextType="none"
+
+            android:fontFamily="@font/orbitron_semibold"
+            android:includeFontPadding="false"
+            android:text="@string/device_text"
+            android:textColor="@color/red"
+            android:textSize="20sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Opponent_player_Image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/enable_btn_background"
+            android:src="@drawable/robot_image" />
+
+        <ImageView
+            android:id="@+id/Opponent_player_symobol_Image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            android:src="@drawable/o_symbol_image" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+    android:id="@+id/btns_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/enable_player_bar_background"
+    android:layout_centerInParent="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+        <TextView
+            android:id="@+id/btn_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="60sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:background="@drawable/enable_btn_background"
+            android:layout_weight="1"
+            android:tag="0"
+            />
+        <TextView
+            android:id="@+id/btn_1"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="60sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:background="@drawable/enable_btn_background"
+
+            android:tag="1"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/btn_2"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="60sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:background="@drawable/enable_btn_background"
+            android:layout_weight="1"
+            android:tag="2"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+        <TextView
+            android:id="@+id/btn_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="60sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:background="@drawable/enable_btn_background"
+            android:layout_weight="1"
+            android:tag="3"
+            />
+        <TextView
+            android:id="@+id/btn_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="60sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:background="@drawable/enable_btn_background"
+            android:layout_weight="1"
+            android:tag="4"
+            />
+        <TextView
+            android:id="@+id/btn_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="60sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:background="@drawable/enable_btn_background"
+
+            android:layout_weight="1"
+            android:tag="5"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <TextView
+            android:id="@+id/btn_6"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="60sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:background="@drawable/enable_btn_background"
+            android:tag="6"
+            />
+        <TextView
+            android:id="@+id/btn_7"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="60sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:background="@drawable/enable_btn_background"
+            android:tag="7"
+            />
+        <TextView
+            android:id="@+id/btn_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="60sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:background="@drawable/enable_btn_background"
+            android:tag="8"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:columnCount="3"
+        android:rowCount="3"
+        android:background="@drawable/player_gray_background"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+
+
+
+
+    </GridLayout>
+
+</LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/start_and_restart_game"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/enable_btn_background"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="start"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/btns_layout"
+        android:background="@drawable/enable_player_bar_background"
+android:id="@+id/you_bar_layout"
+        >
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/you_Image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/You_text"
+            android:textColor="@color/red"
+            android:layout_marginEnd="5dp"
+            android:autoSizeTextType="none"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/orbitron_semibold"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/you_Image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/player_2"
+            android:background="@drawable/enable_btn_background"
+            />
+
+        <ImageView
+            android:id="@+id/you_symbol_Image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/x_symbol_image"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

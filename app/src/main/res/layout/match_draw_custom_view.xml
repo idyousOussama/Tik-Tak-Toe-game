@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/white_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/dialog_animation"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/draw_match_animation" />
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/winner_unknow_text"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/orbitron_semibold"
+        android:layout_below="@+id/dialog_animation"
+/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/dialog_message"
+        >
+        <TextView
+            android:id="@+id/positive_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="+1 match"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+
+            android:fontFamily="@font/orbitron_semibold"
+            android:background="@drawable/deep_blue_background"/>
+
+        <TextView
+            android:id="@+id/negative_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/done_text"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/orbitron_semibold"
+            android:background="@drawable/roze_background"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

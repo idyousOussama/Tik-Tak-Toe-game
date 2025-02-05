@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    tools:context=".Activities.SearchAboutPlayer2Activity">
+
+    <EditText
+android:id="@+id/search_about_opponent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_about_player2_hint"
+         android:background="@drawable/enable_player_bar_background"
+        android:padding="10dp"
+        android:includeFontPadding="false"
+        android:drawableLeft="@drawable/search_icon"
+        android:drawablePadding="7dp"
+        />
+<LinearLayout
+    android:id="@+id/symboms_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical"
+    android:weightSum="3"
+    android:layout_below="@+id/search_about_opponent"
+    >
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_weight="1"
+         android:gravity="center"
+         >
+
+         <ImageView
+             android:layout_width="20dp"
+             android:layout_height="20dp"
+             android:padding="2dp"
+             android:src="@drawable/online_dot_icon"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+android:text="@string/online_text"
+             android:gravity="center"
+             android:layout_marginStart="5dp"
+             android:includeFontPadding="false"
+             android:textColor="@color/black"
+             android:fontFamily="@font/orbitron_semibold"
+             />
+
+     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:src="@drawable/game_control_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/in_game_text"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:fontFamily="@font/orbitron_semibold"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:src="@drawable/offline_dot_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/offline_text"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:fontFamily="@font/orbitron_semibold"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/symboms_layout"
+        android:layout_marginTop="12dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/searching_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+            >
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/searching_animation"
+                android:layout_width="70dp"
+                android:layout_height="73dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/loading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:text="@string/searching_text" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/noResult_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+
+            >
+
+            <ImageView
+                android:id="@+id/noResult_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+               android:src="@drawable/no_result" />
+
+            <TextView
+                android:id="@+id/no_result_message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/no_result_text" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/searching_opponent_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+
+
+            >
+
+            <ImageView
+                android:layout_width="193dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/resuest_to_search_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:text="@string/search_opponent"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="5dp"
+                />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/player_RV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

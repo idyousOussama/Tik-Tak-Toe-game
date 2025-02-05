@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/white_background"
+    >
+
+    <TextView
+        android:id="@+id/confirmation_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave waiting room ?"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/orbitron_semibold"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/confirmation_dialog_message"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmation_dialog_title"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/orbitron"
+        android:letterSpacing="0.01"
+        android:text=""
+        android:textColor="@color/deep_gray"
+        android:textSize="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmation_dialog_message"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/confirmation_dialog_negative_Btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/roze_background"
+            android:fontFamily="@font/orbitron_semibold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:text="@string/leave_text"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/confirmation_dialog_positive_Btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/deep_blue_background"
+            android:fontFamily="@font/orbitron_semibold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/wait_text"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

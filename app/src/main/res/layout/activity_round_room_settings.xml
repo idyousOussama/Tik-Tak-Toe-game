@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    tools:context=".Activities.RoundRoomSettingsActivity">
+<TextView
+    android:id="@+id/waiting_room_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/waiting_room_text"
+    android:textColor="@color/black"
+    android:textSize="25dp"
+    android:fontFamily="@font/orbitron_semibold"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/players_cards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/roze_background"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/waiting_room_currentPlayer_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+
+                />
+           <TextView
+               android:id="@+id/waiting_room_currentPlayer_name"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="20sp"
+               android:layout_marginTop="10dp"
+
+               android:textColor="@color/black"
+               android:fontFamily="@font/orbitron_semibold"/>
+            <TextView
+                android:id="@+id/waiting_room_currentPlayer_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:autoSizeTextType="none"
+
+                android:layout_marginTop="10dp"
+
+                android:textColor="@color/black"
+                android:fontFamily="@font/orbitron_semibold"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:gravity="center"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+
+
+    >
+
+
+
+    <TextView
+        android:id="@+id/waiting_room_currentPlayer_diamond_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/orbitron_semibold"
+        android:textColor="@color/black"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/diamond_icon_image"/>
+    <TextView
+        android:id="@+id/waiting_room_currentPlayer_notes_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/orbitron_semibold"
+        android:textColor="@color/black"
+        android:drawablePadding="5dp"
+        android:layout_marginStart="20dp"
+/>
+</LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/light_blue_background"
+            android:padding="5dp"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:id="@+id/waiting_tojoin_layout"
+             android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/waiting_tojoin_oppenent_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/player_7"
+                    android:padding="5dp"
+
+                    />
+                <LinearLayout
+                    android:id="@+id/searching_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    >
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/searching_animation"
+                        android:layout_width="70dp"
+                        android:layout_height="73dp"
+                        android:scaleType="centerCrop"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/loading" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-20dp"
+                        android:textColor="@color/deep_gray"
+                        android:text="@string/waiting_to_joinText" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+               android:id="@+id/waiting_tojoin_opponentPlayer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/waiting_room_oppenenet_image"
+
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/waiting_room_oppenenet_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/orbitron_semibold"
+                    android:maxLines="1"
+android:gravity="center"
+
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/waiting_room_oppenenet_id"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:fontFamily="@font/orbitron_semibold"
+
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:weightSum="2"
+
+
+                    >
+
+
+                    <TextView
+                        android:id="@+id/waiting_room_oppenenet_diamond_num"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/diamond_icon_image"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/orbitron_semibold"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/waiting_room_oppenenet_notes_num"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/orbitron_semibold"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/ready_andSatrt_Btn"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/light_blue_background"
+        android:fontFamily="@font/orbitron"
+        android:gravity="center"
+
+        android:padding="10dp"
+        android:text="Start"
+        android:textColor="@color/light_gray" />
+    <TextView
+        android:id="@+id/leave_btn"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/roze_background"
+        android:fontFamily="@font/orbitron"
+        android:gravity="center"
+android:layout_marginStart="13dp"
+
+        android:padding="10dp"
+        android:text="@string/leave_text"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

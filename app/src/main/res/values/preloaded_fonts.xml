@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/faster_one</item>
+        <item>@font/geostar_fill</item>
+        <item>@font/micro_5</item>
+        <item>@font/orbitron</item>
+        <item>@font/orbitron_semibold</item>
+        <item>@font/press_start_2p</item>
+        <item>@font/rubik_wet_paint</item>
+        <item>@font/sixtyfour</item>
+        <item>@font/stalinist_one</item>
+        <item>@font/workbench</item>
+    </array>
+</resources>

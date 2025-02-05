@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/bottom_sheet_animation"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lose_animation"/>
+    <TextView
+        android:id="@+id/bottom_sheet_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="@string/you_lose_text"
+        android:layout_below="@+id/bottom_sheet_animation"
+        android:textSize="30sp"
+        android:fontFamily="@font/orbitron_semibold"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/bottom_sheet_message_text"
+        >
+
+        <TextView
+            android:id="@+id/bottom_sheet_back_btn"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roze_background"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:includeFontPadding="false"
+            android:text="@string/back_string"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/orbitron_semibold"
+android:textSize="20dp"
+            android:textColor="@color/white"
+android:gravity="center"
+            />
+             <TextView
+                 android:id="@+id/bottom_sheet_restart_btn"
+                 android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/deep_blue_background"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:text="@string/restart_text"
+                 android:layout_margin="20dp"
+                 android:textSize="20dp"
+                 android:includeFontPadding="false"
+                 android:fontFamily="@font/orbitron_semibold"
+                 android:textColor="@color/white"
+android:gravity="center"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>
