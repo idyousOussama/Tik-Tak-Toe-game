@@ -34,7 +34,7 @@ class PlayWithDeviceActivity : AppCompatActivity(), View.OnClickListener {
     private val handler = Handler(Looper.getMainLooper())
     var filledPos : MutableList<String> = mutableListOf("","","","","","","","","")
     var deviceIsPaly  = true
-    var winner  = ""
+    var winner  =""
     var roundIsDone = true
     var gameMode : String  = "Easy"
     var diamodNum = 1

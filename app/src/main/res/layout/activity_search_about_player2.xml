@@ -17,8 +17,10 @@ android:id="@+id/search_about_opponent"
         android:hint="@string/search_about_player2_hint"
          android:background="@drawable/enable_player_bar_background"
         android:padding="10dp"
+         android:ellipsize="end"
+        android:maxLines="1"
         android:includeFontPadding="false"
-        android:drawableLeft="@drawable/search_icon"
+        android:drawableStart="@drawable/search_icon"
         android:drawablePadding="7dp"
         />
 <LinearLayout
@@ -29,6 +31,7 @@ android:id="@+id/search_about_opponent"
     android:layout_marginTop="10dp"
     android:gravity="center_vertical"
     android:weightSum="3"
+
     android:layout_below="@+id/search_about_opponent"
     >
      <LinearLayout

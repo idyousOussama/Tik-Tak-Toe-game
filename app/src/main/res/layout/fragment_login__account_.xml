@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".Fragments.LoginAccountFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:scrollIndicators="start"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="@string/welcome_text"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"
+                android:textSize="55sp"
+
+                />
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/login_message_text"
+                android:textColor="@color/deep_gray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                />
+
+            <ImageView
+                android:layout_width="213dp"
+                android:layout_height="232dp"
+                android:src="@drawable/log_in_image"
+android:scaleType="centerCrop"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_text"
+                    android:layout_marginStart="25dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:textStyle="bold"
+
+                    />
+                <EditText
+                    android:id="@+id/player_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:background="@drawable/enable_player_bar_background"
+                    android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
+                    android:inputType="textEmailAddress"/>
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+
+            >
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password_text"
+            android:layout_marginStart="25dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+
+            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/enable_player_bar_background"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+
+
+                >
+
+                <EditText
+                    android:id="@+id/player_password"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
+                    android:inputType="textPassword"
+                    android:padding="15dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/show_and_hide_sginIn_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/open_eyes" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+<RelativeLayout
+    android:id="@+id/sign_in_btn"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/deep_blue_effect_background"
+    >
+    <TextView
+        android:id="@+id/sign_in_btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/sign_text"
+android:layout_centerInParent="true"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+            android:textSize="20sp"
+        android:includeFontPadding="false"
+        />
+    <ProgressBar
+        android:id="@+id/sign_in_progress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:theme="@style/CustomProgressBarStyle"
+        android:indeterminate="false" />
+</RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/gray"
+                    android:text="@string/i_dont_have_account_text"
+                    android:fontFamily="@font/poppins_light"
+                    android:includeFontPadding="false"
+                    />
+                <TextView
+                    android:id="@+id/sgin_up_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/deep_blue"
+                    android:text="@string/sgin_up_text"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="5dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

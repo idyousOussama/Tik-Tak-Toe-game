@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ShowUserFollowersAndFollowingsActivity">
+    <ImageView
+        android:id="@+id/show_user_followers_And_Followings_go_backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src = "@drawable/arrow_left"
+        android:padding="7dp"
+
+    android:background="@drawable/transparant_effect_background"/>
+    
+    
+    <TextView
+        android:id="@+id/show_user_followers_And_Followings_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user name"
+        android:layout_toEndOf="@+id/show_user_followers_And_Followings_go_backbtn"
+        android:layout_alignTop="@+id/show_user_followers_And_Followings_go_backbtn"
+        android:layout_alignBottom="@+id/show_user_followers_And_Followings_go_backbtn"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins"
+        android:textSize="20sp"
+        android:visibility="gone"
+        />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/show_user_followers_And_Followings_tab_layout"
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/show_user_followers_And_Followings_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/show_user_followers_And_Followings_user_name"
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorFullWidth="true"
+        android:layout_marginTop="5dp"
+        app:tabIndicatorHeight="2dp"
+        android:layout_marginBottom="8dp"
+        app:tabSelectedTextColor="@color/black"
+        android:background="@color/white"
+         />
+<ProgressBar
+    android:id="@+id/loading_current_online_player_progress"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:id="@+id/reloading_current_user_arrow_layout"
+android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/reloading_current_user_arrow_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/reload_data_icon"
+            />
+
+        <TextView
+            android:id="@+id/reloading_current_user_arrow_text_message"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="@string/failed_to_load_page_message"/>
+    </LinearLayout>
+</RelativeLayout>

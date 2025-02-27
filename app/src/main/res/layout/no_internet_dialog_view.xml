@@ -4,6 +4,8 @@
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:background="@drawable/white_background"
+    android:layoutDirection="ltr"
+
     >
 
     <ImageView
@@ -15,13 +17,13 @@
 
     <TextView
         android:id="@+id/no_internet_message_text"
-        android:layout_width="334dp"
+        android:layout_width="318dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/no_internet_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
-        android:fontFamily="@font/orbitron"
         android:letterSpacing="0.01"
         android:lineSpacingExtra="5dp"
         android:text="@string/no_internet_message"
@@ -40,7 +42,7 @@
         android:layout_margin="20dp"
         android:textSize="18dp"
         android:includeFontPadding="false"
-        android:fontFamily="@font/orbitron_semibold"
+        android:fontFamily="@font/poppins_semibold"
         android:textColor="@color/white"
         android:gravity="center"
         />
@@ -57,7 +59,7 @@
         android:layout_marginTop="10dp"
         android:textSize="18dp"
         android:includeFontPadding="false"
-        android:fontFamily="@font/orbitron_semibold"
+        android:fontFamily="@font/poppins_semibold"
         android:textColor="@color/white"
         android:gravity="center"
         />

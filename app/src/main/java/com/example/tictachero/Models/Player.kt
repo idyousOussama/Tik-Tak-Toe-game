@@ -10,6 +10,8 @@ import java.io.Serializable
      var playerId : String,
  var ID : String
  ,
+  var playerEmail : String?
+ ,
      var playerName : String ,
      var playerImage : Int,
      var isLogainedAccount :Boolean ,
@@ -18,5 +20,10 @@ import java.io.Serializable
      var playerPlayedNumber : Int ,
      var playerWonNumber : Int ,
      var userLoseNumber : Int ,
-
+var PlayerType : PlayerType
  ) : Serializable
+
+
+enum class PlayerType {
+    VISITOR,HOSTER
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SearchingAboutFriendsActivity">
+    <EditText
+android:id="@+id/searching_friend_inpute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:fontFamily="@font/poppins"
+        android:includeFontPadding="false"
+        android:drawablePadding="10dp"
+        android:background="@drawable/enable_player_bar_background"
+        android:drawableStart="@drawable/search_icon"
+        android:hint="@string/search_frieend_iput_hint"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frtiends_list_Rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searching_friend_inpute"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        />
+<LinearLayout
+    android:id="@+id/searching_for_friend_mesage_and_image_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_centerInParent="true">
+
+    <ImageView
+        android:id="@+id/searching_for_friend_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:src="@drawable/search_icon" />
+
+    <TextView
+
+        android:id="@+id/searching_for_friend_text_message"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/searching_about_frient_motivate_text"/>
+</LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/friends_searching_progress"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

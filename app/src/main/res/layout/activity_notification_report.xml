@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.NotificationReportActivity">
+
+    <RelativeLayout
+        android:id="@+id/notification_report_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/report_go_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_left"
+            android:layout_margin="10dp"
+            android:background="@drawable/transparant_effect_background"
+            />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/report_a_problem_text"
+    android:textColor="@color/black"
+    android:fontFamily="@font/poppins_semibold"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    android:layout_centerVertical="true"
+    android:includeFontPadding="false"
+    android:layout_toEndOf="@+id/report_go_back_btn"/>
+<TextView
+android:id="@+id/send_repot_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/send_text"
+    android:textColor="@color/gray"
+    android:fontFamily="@font/poppins"
+    android:textStyle="bold"
+    android:textSize="15sp"
+    android:layout_centerVertical="true"
+    android:includeFontPadding="false"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="10dp"
+
+    />
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/notification_report_tool_bar"
+        android:background="@color/deep_gray"/>
+
+<EditText
+    android:id="@+id/explanatin_input"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:hint="@string/type_an_explain_hint"
+    android:padding="10dp"
+    android:maxLength="300"
+    android:layout_below="@+id/notification_report_tool_bar"
+    android:gravity="top|left"
+    android:fontFamily="@font/poppins"
+    android:includeFontPadding="false"
+    android:background="@drawable/enable_player_bar_background"/>
+
+    <TextView
+        android:id="@+id/report_length_counter_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/300"
+        android:layout_below="@+id/explanatin_input"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="15sp"
+android:layout_marginTop="5dp"
+        android:layout_alignEnd="@+id/explanatin_input"
+        android:layout_centerVertical="true"
+        android:includeFontPadding="false"
+        android:layout_marginEnd="23dp"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/send_report_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/report_length_counter_text"
+        android:background="@drawable/light_blue_background"
+
+        >
+        <TextView
+            android:id="@+id/send_report_btn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_text"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/light_gray"
+            android:fontFamily="@font/poppins"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            />
+        <ProgressBar
+            android:id="@+id/sending_report_progress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/report_automaticly_info_message"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_light"
+        android:includeFontPadding="false"
+
+        android:layout_marginTop="2dp"
+android:textColor="@color/gray"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignEnd="@+id/send_report_btn"
+        android:layout_alignStart="@+id/send_report_btn"
+        android:layout_below="@+id/send_report_btn"
+/>
+
+</RelativeLayout>

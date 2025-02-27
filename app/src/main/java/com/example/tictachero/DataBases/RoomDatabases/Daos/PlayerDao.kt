@@ -12,6 +12,8 @@ interface PlayerDao {
 
     @Query("select * from player")
     fun getAllPlayerAccount() : List<Player>
+   @Query("select * from player where playerId = :playerId")
+    fun getAccountById(playerId : String) : Player
 
     @Query("Select * from player where isLogainedAccount = 1")
     fun  getPlayerLogainedAccount() : Player
@@ -24,5 +26,13 @@ interface PlayerDao {
 
     @Query("update player set userLoseNumber= userLoseNumber + 1 where playerId = :id ")
     fun playerIsLose(id : String)
+
+    @Query("update player set playerName = :playerName  where playerId = :id")
+fun updatePlayerNameById(playerName : String , id :String)
+ @Query("update player set playerImage = :playerImage  where playerId = :id")
+ fun updatePlayerImageById(playerImage : Int , id :String)
+
+ @Query("UPDATE player SET isLogainedAccount = :islogined WHERE playerId = :id")
+ fun upDateLoginedAccountById (id:String , islogined : Boolean)
 
 }

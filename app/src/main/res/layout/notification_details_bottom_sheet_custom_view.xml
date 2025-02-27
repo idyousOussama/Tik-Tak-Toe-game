@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/white_bottom_sheet_background"
+    >
+<View
+    android:layout_width="50dp"
+    android:layout_height="5dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/light_blue_background"
+/>
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/bottom_sheet_player_image"
+      android:layout_width="70dp"
+      android:layout_height="70dp"
+      android:layout_marginTop="20dp"
+      android:src="@drawable/player_7"/>
+    <TextView
+      android:id="@+id/bottom_sheet_player_message_text"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+        android:text="akfdazkpkfaokpadfazopkdazodkzeopdkzodzkodz"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:lineSpacingExtra="3dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/light_blue_background"
+
+
+
+        />
+
+<RelativeLayout
+    android:id="@+id/delete_notification_layout_btn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="@drawable/rectangle_white_selctor_btn_background"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/delete_notification_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="7dp"
+        android:enabled="false"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/circle_gray_backgroud"
+        android:src="@drawable/trash" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/delete_this_notification_text"
+    android:layout_marginStart="10dp"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:layout_centerVertical="true"
+    android:layout_toEndOf="@+id/delete_notification_image"
+    android:fontFamily="@font/poppins"
+    android:includeFontPadding="false"
+    android:textStyle="bold"/>
+    <ProgressBar
+        android:id="@+id/deleting_notification_pogress"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/report_notification_btn_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:orientation="horizontal"
+    android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/rectangle_white_selctor_btn_background"
+
+        >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/reading_notification_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="7dp"
+        android:enabled="false"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/circle_gray_backgroud"
+        android:src="@drawable/reportl_phone_icon" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/report_issue_to_notification_team_text"
+    android:layout_marginStart="10dp"
+
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:layout_toStartOf="@+id/reading_notification_image"
+    android:fontFamily="@font/poppins"
+    android:includeFontPadding="false"
+    android:textStyle="bold"/>
+</LinearLayout>
+
+</LinearLayout>

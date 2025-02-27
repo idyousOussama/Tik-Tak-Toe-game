@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation = "horizontal"
+    android:gravity="center_vertical|left"
+    android:layoutDirection="rtl"
+    >
+
+
+
+
+    <CheckBox
+        android:id="@+id/language_item_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/arabic_text"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/circle_white_effect_background"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textDirection="ltr"
+
+        />
+
+
+</LinearLayout>

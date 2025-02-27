@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.TicTacHero" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">#41649a</item>
-        <item name="colorAccent">@color/white</item>
+        <item name="colorPrimary">@color/deep_blue</item>
+        <item name="colorPrimaryDark">@color/deep_blue</item>
+        <item name="colorAccent">@color/gray</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:navigationBarColor">@color/white</item>
@@ -11,6 +11,7 @@
         <item name="colorOnTertiary">@color/white</item>
         <item name="colorError">@color/primary</item>
         <item name="colorOnError">@color/white</item>
+        <item name="progressBarStyle">@color/white</item>
     </style>
 
     <style name="Theme.TicTacHero" parent="Base.Theme.TicTacHero" />
@@ -28,4 +29,17 @@
     </style>
 
     <color name="transparent">#00F44336</color>
+
+        <!-- Custom ProgressBar style with tint -->
+        <style name="CustomProgressBarStyle">
+            <!-- Apply a color tint to the progress bar -->
+<item name="colorAccent">@color/white</item>
+        </style>
+
+
+
+    <style name="TabTextStyle">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
 </resources>

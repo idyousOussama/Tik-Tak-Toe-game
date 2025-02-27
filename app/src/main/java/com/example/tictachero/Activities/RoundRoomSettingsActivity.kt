@@ -73,6 +73,16 @@ opponentGameStatusListener()
                                 GameStatus.START.name -> {
                                     showCounterDialog()
                                 }
+                                GameStatus.REFUSE.name -> {
+                                    disableStartBtn()
+                                    val  confiramtionDialogTitle =  getString(R.string.dialog_refuse_room_title)
+                                    val  confiramtionDialogMessage =  getString(R.string.dialog_opponent_refuse_room_message)
+                                    val positiveBtnText = getString(R.string.wait_text)
+                                    val negativeBtnText = getString(R.string.leave_text)
+                                    shawConferamtiontDialog(confiramtionDialogTitle,confiramtionDialogMessage,positiveBtnText,negativeBtnText)
+                                    Toast.makeText(baseContext , "Opponent is left room" , Toast.LENGTH_SHORT).show()
+
+                                }
                                 GameStatus.LEAVE.name -> {
                                   disableStartBtn()
                                   val  confiramtionDialogTitle =  getString(R.string.dialog_leave_room_title)
@@ -80,7 +90,8 @@ opponentGameStatusListener()
                                   val positiveBtnText = getString(R.string.wait_text)
                                   val negativeBtnText = getString(R.string.leave_text)
                                     shawConferamtiontDialog(confiramtionDialogTitle,confiramtionDialogMessage,positiveBtnText,negativeBtnText)
-                                    Toast.makeText(baseContext , "Opponent is ready to start" , Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(baseContext , "Opponent is left room" , Toast.LENGTH_SHORT).show()
+
                                 }
                             }
                         }
@@ -92,14 +103,20 @@ opponentGameStatusListener()
                 }
             })
     }
-    private fun shawConferamtiontDialog(  confiramtionDialogTitle: String, confiramtionDialogMessage: String, positiveBtnText: String, negativeBtnText: String) {
+    private fun shawConferamtiontDialog(  confiramtionDialogTitle: String, confiramtionDialogMessage: String , positiveBtnText: String ?, negativeBtnText: String?) {
 val confirmationDialogView  = layoutInflater.inflate(R.layout.confirmation_dialog_view,null)
 val dialogBinding = ConfirmationDialogViewBinding.bind(confirmationDialogView)
   dialogBinding.confirmationDialogTitle.text = confiramtionDialogTitle
   dialogBinding.confirmationDialogMessage.text = confiramtionDialogMessage
   dialogBinding.confirmationDialogPositiveBtn.text = positiveBtnText
   dialogBinding.confirmationDialogNegativeBtn.text = negativeBtnText
-val confiramtionDialog = Dialog(this)
+        if(positiveBtnText == null ) {
+            dialogBinding.confirmationDialogPositiveBtn.visibility = View.GONE
+        }
+        if(negativeBtnText == null ) {
+            dialogBinding.confirmationDialogNegativeBtn.visibility = View.GONE
+        }
+        val confiramtionDialog = Dialog(this)
 confiramtionDialog.setContentView(confirmationDialogView)
         confiramtionDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialogBinding.confirmationDialogNegativeBtn.setOnClickListener {
@@ -108,7 +125,6 @@ confiramtionDialog.setContentView(confirmationDialogView)
                     upDatePlayerGameStatus(GameStatus.LEAVE.name)
                 }
             }
-         Toast.makeText(baseContext , "jkjdshks4" , Toast.LENGTH_SHORT).show()
         }
         dialogBinding.confirmationDialogPositiveBtn.setOnClickListener {
             confiramtionDialog.dismiss()
@@ -116,18 +132,10 @@ confiramtionDialog.setContentView(confirmationDialogView)
         confiramtionDialog.show()
     }
 
-    private fun removeBattleRoom(confiramtionDialog: Dialog) {
-Toast.makeText(baseContext , "jkjdshks0" , Toast.LENGTH_SHORT).show()
-        battleRoomRef!!.removeValue().addOnCompleteListener {task ->
-            if (task.isSuccessful){
-                confiramtionDialog.dismiss()
-                finish()
-            }
-
-        }
 
 
-    }
+
+
 
     private fun setUpPlayersCards() {
         opponentPlayer = intent.getSerializableExtra("opponent") as OnlinePlayer
@@ -245,10 +253,11 @@ counter(dialogBinding.counterText)
         handler.post(runnable) // Start the countdown
     }
     private fun navigateToNewActivity(newActivity: Class<*>) {
-val newActivityIntent = Intent(this,newActivity )
+        val newActivityIntent = Intent (baseContext , newActivity)
+        newActivityIntent.putExtra("opponent" , opponentPlayer )
+        newActivityIntent.putExtra("currentOnlinePlayer" , currentOnlinePlayer )
         newActivityIntent.putExtra("player_type_key" , playerType)
         startActivity(newActivityIntent)
-        finish()
 
     }
     private fun onBackPressonBachPressed() {

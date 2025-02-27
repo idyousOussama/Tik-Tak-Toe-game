@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/white_background"
+    android:padding="10dp"
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/edit_player_profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/background"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/edit_player_profile_name"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/write_your_nameher_hint"
+        android:background="@drawable/enable_player_bar_background"
+        android:padding="15dp"
+        android:includeFontPadding="false"
+        android:layout_marginTop="20dp"/>
+<RelativeLayout
+    android:id="@+id/player_profile_save_changes_btn"
+    android:layout_width="349dp"
+    android:layout_height="45dp"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/light_blue_background"
+    >
+    <TextView
+        android:id="@+id/player_profile_save_changes_Text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/save_text"
+        android:textColor="@color/light_gray"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:includeFontPadding="false"
+    />
+
+    <ProgressBar
+        android:id="@+id/saving_profile_progress"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

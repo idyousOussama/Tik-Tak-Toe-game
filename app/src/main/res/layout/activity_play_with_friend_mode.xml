@@ -17,12 +17,14 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:padding="10dp"
+        android:layout_alignParentStart="true"
         android:background="@drawable/enable_player_bar_background"
         >
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/Opponent_player_result_bar_Image"
             android:layout_width="20dp"
             android:layout_height="20dp"
+
             android:layout_centerInParent="true"
             android:src="@drawable/default_player_1"/>
 
@@ -50,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 / 3"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:textColor="@color/black"
         android:layout_alignTop="@+id/result_bar_layout"
         android:layout_alignBottom="@+id/result_bar_layout"
@@ -70,6 +72,8 @@
         android:layout_above="@+id/btns_layout"
         android:background="@drawable/enable_player_bar_background"
         android:layout_marginBottom="50dp"
+       android:paddingStart="20sp"
+        android:paddingEnd="20sp"
         >
         <TextView
             android:layout_alignParentLeft="true"
@@ -80,10 +84,9 @@
             android:textColor="@color/red"
             android:layout_marginEnd="5dp"
             android:autoSizeTextType="none"
-
+android:textDirection="ltr"
             android:layout_centerVertical="true"
             android:textSize="20sp"
-            android:layout_marginStart="20dp"
             android:includeFontPadding="false"
             android:fontFamily="@font/orbitron_semibold"/>
 
@@ -100,7 +103,6 @@
             android:layout_height="70dp"
             android:layout_alignParentRight="true"
             android:padding="10dp"
-            android:layout_marginEnd="20dp"
             android:src="@drawable/x_symbol_image"/>
 
 
@@ -315,6 +317,8 @@
         android:layout_below="@+id/btns_layout"
         android:background="@drawable/enable_player_bar_background"
         android:id="@+id/player_2_bar_layout"
+        android:paddingStart="20sp"
+        android:paddingEnd="20sp"
         >
         <TextView
             android:layout_alignParentLeft="true"
@@ -327,7 +331,7 @@
             android:autoSizeTextType="none"
             android:layout_centerVertical="true"
             android:textSize="20sp"
-            android:layout_marginStart="20dp"
+          android:textDirection="ltr"
             android:includeFontPadding="false"
             android:fontFamily="@font/orbitron_semibold"/>
 
@@ -345,7 +349,7 @@
             android:layout_height="70dp"
             android:layout_alignParentRight="true"
             android:padding="10dp"
-            android:layout_marginEnd="20dp"
+
             android:src="@drawable/o_symbol_image"/>
 
 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/notification_view_layout"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/player_notification_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+
+        android:padding="10dp"
+        android:src="@color/light_gray"/>
+
+    <TextView
+        android:id="@+id/notification_message"
+        android:layout_width="255dp"
+        android:layout_height="61dp"
+        android:layout_above="@+id/notification_date_text"
+        android:layout_alignTop="@+id/player_notification_image"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="9dp"
+        android:layout_toStartOf="@+id/show_noification_sheet_btn"
+        android:layout_toEndOf="@+id/player_notification_image"
+
+        android:background="@color/light_gray"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/notification_date_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/player_notification_image"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/show_noification_sheet_btn"
+        android:layout_toEndOf="@+id/player_notification_image"
+        android:fontFamily="@font/poppins_light"
+        android:includeFontPadding="false"
+        android:background="@color/light_gray"
+        android:textColor="@color/deep_gray"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_below="@+id/player_notification_image"
+        android:background="@color/deep_gray"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/show_noification_sheet_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src ="@drawable/more"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="centerCrop"/>
+
+
+
+</RelativeLayout>

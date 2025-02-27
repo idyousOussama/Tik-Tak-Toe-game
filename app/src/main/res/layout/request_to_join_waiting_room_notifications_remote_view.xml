@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/notification_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+
+        android:text="Ousama id yous"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/notification_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:includeFontPadding="false"
+android:textSize="17sp"
+        android:text="@string/request_to_join_to_waiting_room_notification_message_text"
+        android:textColor="@color/black"
+   />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="right"
+    android:layout_marginTop="5dp"
+    >
+
+    <TextView
+        android:id="@+id/refuse_btn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/refuse_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/deep_blue"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/notificaion_join_btn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/join_text"
+        android:textColor="@color/deep_blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+</LinearLayout>
+
+
+</LinearLayout>

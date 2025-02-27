@@ -19,8 +19,9 @@ import com.example.tictachero.Activities.SelectPlayModeActivity.Companion.curren
 import com.example.tictachero.Activities.SplashActivity.Companion.firebaseDB
 import com.example.tictachero.Adapters.SearchedPlayerAdapter
 import com.example.tictachero.Listeners.SearchedPlayerListener
+import com.example.tictachero.Models.NotificationTypes
 import com.example.tictachero.Models.OnlinePlayer
-import com.example.tictachero.Models.RequetToPlayNotification
+import com.example.tictachero.Models.Notification
 import com.example.tictachero.R
 import com.example.tictachero.databinding.ActivitySearchAboutPlayer2Binding
 import com.example.tictachero.databinding.NoInternetDialogViewBinding
@@ -28,6 +29,9 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class SearchAboutPlayer2Activity : AppCompatActivity() {
 private lateinit var binding : ActivitySearchAboutPlayer2Binding
@@ -80,6 +84,8 @@ if(playerIsConcted()) {
     processProgress.visibility = View.VISIBLE
     sendRequestToOppenent(player, requestBtn,
         processProgress)
+    isRequested = true
+
 }else {
     showNoInternetDialog()
 }
@@ -87,25 +93,32 @@ if(playerIsConcted()) {
 Toast.makeText(baseContext,getString(R.string.already_select_your_opponent) , Toast.LENGTH_SHORT).show()
  }
             }
-
         })
     }
     private fun sendRequestToOppenent(
         player: OnlinePlayer,
         requestBtn: TextView,
         processProgress: ProgressBar ) {
-        val notifiationRef = firebaseDb.getReference("Notifications").child("RequestToPlaying")
-      var notificationId = notifiationRef.push().key.toString()
-        val requestNotification = RequetToPlayNotification(notificationId,currentOnlinePlayer!!)
-        notifiationRef.child(player.playerId).child(notificationId).setValue(requestNotification).addOnCompleteListener {task ->
-             if(task.isSuccessful) {
-                 processProgress.visibility = View.GONE
-                 requestBtn.visibility = View.VISIBLE
-                createBattleRoom(player)
+        val notifiationRef = firebaseDB.getReference("Notifications").child(player.playerId)
+      val notificationId = notifiationRef.push().key.toString()
+        // timestamp (current time)
+        val currentTimestamp = System.currentTimeMillis()
+        // Format and display the date
 
+        val requestNotification = Notification(notificationId,currentOnlinePlayer!!.playerId,NotificationTypes.RQUESTTOPLAY,currentTimestamp,false)
+        notifiationRef.child("newNotification").child(notificationId).setValue(requestNotification).addOnCompleteListener {task ->
+             if(task.isSuccessful) {
+                 notifiationRef.child("Notification").child(notificationId).setValue(requestNotification).addOnCompleteListener { task ->
+                     if (task.isSuccessful) {
+                         processProgress.visibility = View.GONE
+                         requestBtn.visibility = View.VISIBLE
+                         createBattleRoom(player)
+                     }
+                 }
              }
         }
     }
+
     private fun createBattleRoom(player: OnlinePlayer) {
         val gameRoomRef = firebaseDb.getReference("Rooms").child(currentOnlinePlayer!!.playerId + player.playerId)
         gameRoomRef.child("players").child(currentOnlinePlayer!!.playerId).setValue(currentOnlinePlayer).addOnCompleteListener{ task ->

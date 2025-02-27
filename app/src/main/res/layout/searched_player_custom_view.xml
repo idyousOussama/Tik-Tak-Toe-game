@@ -1,47 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   android:layout_width="match_parent"
-   android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:padding="10dp"
     android:layout_marginTop="5dp"
     android:background="@color/white"
     >
- <RelativeLayout
-     android:id="@+id/searchedPlayer_player_Image_layout"
-     android:layout_width="73dp"
-     android:layout_height="68dp"
-    >
-     <de.hdodenhof.circleimageview.CircleImageView
-         android:id="@+id/searchedPlayer_player_Image"
-         android:layout_width="73dp"
-         android:layout_height="68dp"
-         android:src="@drawable/player_7" />
-<ImageView
-    android:id="@+id/player_status_image"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@drawable/game_control_icon"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentBottom="true"
-    android:layout_marginEnd="5dp"/>
- </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/searchedPlayer_player_Image_layout"
+        android:layout_width="73dp"
+        android:layout_height="68dp"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/searchedPlayer_player_Image"
+            android:layout_width="73dp"
+            android:layout_height="68dp"
+            android:src="@drawable/player_7" />
+        <ImageView
+            android:id="@+id/player_status_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/game_control_icon"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="5dp"/>
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/searchedPlayer_player_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Oussama id yous"
-        android:layout_toRightOf="@+id/searchedPlayer_player_Image_layout"
-        android:textColor="@color/black"
-        android:layout_marginEnd="10dp"
 
-        android:autoSizeTextType="none"
-        android:layout_marginTop="10dp"
-        android:layout_toLeftOf="@+id/send_request_btn"
-        android:layout_marginStart="5dp"
-        android:includeFontPadding="false"
-        android:layout_alignTop="@+id/searchedPlayer_player_Image_layout"
-        android:fontFamily="@font/orbitron_semibold"/>
 
     <TextView
         android:id="@+id/searchedPlayer_player_id"
@@ -51,41 +36,62 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/searchedPlayer_player_Image_layout"
+
         android:layout_marginEnd="10dp"
-        android:layout_toLeftOf="@+id/send_request_btn"
-        android:layout_toRightOf="@+id/searchedPlayer_player_Image_layout"
+        android:maxWidth="200dp"
+        android:textDirection="rtl"
         android:fontFamily="@font/orbitron"
         android:includeFontPadding="false"
-        android:text="ID : 12584585441148"
         android:textColor="@color/deep_gray" />
-<RelativeLayout
-    android:id="@+id/send_request_btn"
-    android:layout_width="87dp"
-    android:layout_height="33dp"
-    android:layout_alignParentRight="true"
-    android:layout_centerVertical="true"
-    android:background="@drawable/deep_blue_background"
 
-    >
     <TextView
-        android:id="@+id/searchedPlayer_player_sendRequst"
-        android:layout_width="87dp"
-        android:layout_height="33dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
+        android:id="@+id/searchedPlayer_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/searchedPlayer_player_Image_layout"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@+id/searchedPlayer_player_Image_layout"
+      android:maxLines="1"
+        android:maxWidth="200dp"
+        android:ellipsize="end"
         android:fontFamily="@font/orbitron_semibold"
         android:includeFontPadding="false"
-        android:padding="5dp"
-        android:gravity="center"
-        android:text="@string/request_text"
-        android:textColor="@color/white"
-        android:textSize="13sp" />
-    <ProgressBar
-        android:id="@+id/requesting_progress_bar"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_centerInParent="true"/>
-</RelativeLayout>
+        android:text="pussame_ idpuns"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textDirection="rtl" />
+    <RelativeLayout
+        android:id="@+id/send_request_btn"
+        android:layout_width="87dp"
+        android:layout_height="33dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+
+        android:background="@drawable/deep_blue_background"
+
+        >
+        <TextView
+            android:id="@+id/searchedPlayer_player_sendRequst"
+            android:layout_width="87dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/orbitron_semibold"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="@string/request_text"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+        <ProgressBar
+            android:id="@+id/requesting_progress_bar"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
 
 </RelativeLayout>

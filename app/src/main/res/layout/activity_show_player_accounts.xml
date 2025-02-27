@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="10dp"
+    android:background="#F0F7FB"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ShowPlayerAccountsActivity">
+
+
+    <TextView
+        android:id="@+id/select_app_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/english_text"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/deep_gray"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:background="@drawable/transparant_effect_background"
+        android:drawableRight="@drawable/keyboard_arrow_down"
+        android:includeFontPadding="false"
+android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/log_ancreate_btns_layout"
+        android:layout_below="@+id/select_app_language"
+android:gravity="center"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/player_account_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:layout_below="@+id/myAcccounts_text"
+            />
+        <TextView
+            android:id="@+id/see_more_account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_more_text"
+            android:layout_gravity="right"
+            android:textColor="@color/deep_blue"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/transparant_effect_background"
+            android:fontFamily="@font/poppins_semibold"
+            android:drawableRight="@drawable/blue_arrow_left"
+            android:includeFontPadding="false"/>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/log_ancreate_btns_layout"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+android:gravity="center"
+    >
+    <TextView
+        android:id="@+id/playerAccounts_signInbtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="@string/log_into_another_Account_text"
+        android:fontFamily="@font/poppins"
+        android:clickable="true"
+        android:focusable="true"
+        android:includeFontPadding="false"
+        android:background="@drawable/circle_gray_backgroud"
+        android:textSize="17dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:text="@string/or_text"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="5dp"
+        android:includeFontPadding="false"
+/>
+    <TextView
+        android:id="@+id/playerAccounts_signUpbtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/create_new_account"
+        android:fontFamily="@font/poppins"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="5dp"
+        android:includeFontPadding="false"
+        android:background="@drawable/deep_blue_effect_background"
+        android:textSize="17dp"/>
+</LinearLayout>
+
+
+
+</RelativeLayout>
